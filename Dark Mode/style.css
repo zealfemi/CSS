@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GENERAL STYLE */
+:root {
+    --BG-COLOR: rgb(22, 22, 63);
+    --MAIN-BG: aliceblue;
+    --SQUARE-BG: aqua;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --BG-COLOR: rgb(17, 17, 19);
+        --MAIN-BG: rgb(55, 64, 71);
+        --SQUARE-BG: rgb(62, 104, 104);
+    }
+}
+
+body {
+    background-color: var(--BG-COLOR);
+    color: white;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    text-align: center;
+    display: sticky;
+    padding: 10px;
+}
+
+header {
+    top: 0;
+}
+
+main {
+    flex-grow: 1;
+    background-color: var(--MAIN-BG);
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 300px));
+    gap: min(2vw, 20px);
+    justify-content: space-evenly;
+    padding: 1rem;
+
+    position: relative;
+}
+
+.square {
+    background: var(--SQUARE-BG);
+    font-size: 2rem;
+    border: 10px double #000;
+    border-radius: 1.5rem;
+    display: grid;
+    place-content: center;
+}
+
+.tooltip {
+    background: var(--BG-COLOR);
+    border: 10px double var(--SQUARE-BG);
+}
+
+.tooltip:hover::before {
+    content: attr(data-tooltip);
+    font-size: 1.5rem;
+    white-space: nowrap;
+    position: absolute;
+    top: 200px;
+    background: var(--BG-COLOR);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+footer {
+    bottom: 0;
+}

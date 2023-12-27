@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    place-content: center;
+    place-items: center;
+    gap: 1rem;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    display: grid;
+    border: 1px solid #000;
+    place-content: center;
+}
+
+div:first-child {
+    background-color: dodgerblue;
+    /* transform: translateX(50%); */
+    /* transform: rotateX(180deg); */
+    /* transform: scaleX(50%); */
+}
+
+div:nth-child(2) {
+    background-color: yellow;
+    /* transform: translateY(-50%); */
+    /* transform: rotateY(180deg); */
+    /* transform: scaleY(50%); */
+}
+
+div:last-child {
+    background-color: limegreen;
+    /* transform: translate(50%, 50%); */
+    /* transform: rotateZ(45deg); */
+    /* transform: scale(50%); */
+}
+
+div:hover {
+    background-color: midnightblue;
+    border-radius: 50%;
+    transition: all 2s ease 0.25s;
+    /* transition-property: background-color, border-radius, transform;
+    transition-duration: 2s, 1.5s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-out; */
+}
+
+div:nth-child(2):hover {
+    transform: rotateZ(-180deg);
+}
+
+div:last-child:hover {
+    transform: rotateZ(180deg);
+}
+
+.animate {
+    /* animation-name: slide;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-direction: reverse; */
+    animation: 4s ease-in-out 0.5s 3 forwards alternate slide;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(300px) rotate(180deg);
+    }
+
+    66% {
+        transform: translateX(-300px) rotate(-180deg);
+    }
+
+    100% {
+        transform: translateX(0);
+        background-color: midnightblue;
+    }
+}
+

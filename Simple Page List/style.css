@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 1rem;
+    text-align: center;
+    background: papayawhip;
+}
+
+h1 {
+    color: #fff;
+    background: darkgreen;
+    border-radius: 2rem 2rem 0 0;
+}
+
+a {
+    color: #333;
+}
+
+nav {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.7;
+    margin: 1rem auto;
+    border: 1px solid #333;
+    border-radius: 2rem;
+    max-width: 600px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border-top: 1px solid #333;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+li a:hover, a:focus {
+    background: #333;
+    color: #fff;
+}
+
+li:last-child a {
+    border-radius: 0 0 2rem 2rem;
+}

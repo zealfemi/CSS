@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 50px auto;
+    grid-template-areas: 
+        "hd hd hd hd hd"
+        "mn mn mn sb sb"
+        "ft ft ft ft ft"
+    ;
+    column-gap: 0.4rem;
+}
+
+.el {
+    display: grid;
+    background-color: #ccc;
+    place-content: center;
+}
+
+.header {
+    grid-area: hd;
+}
+
+.main {
+    grid-area: mn;
+    background-color: gold;
+    min-height: 83.5vh;
+}
+
+.sidebar {
+    grid-area: sb;
+    background-color: grey;
+}
+
+.footer {
+    grid-area: ft;
+}
+

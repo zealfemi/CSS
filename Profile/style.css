@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.unwrap {
+    white-space: nowrap;
+}
+
+.profile {
+    background: no-repeat center url("./img/background.PNG"), papayawhip;
+    background-size: cover;
+}
+
+.hero {
+    padding: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    color:bisque;
+    border-bottom: 2px solid #333;
+    background-color: hsla(0, 0%, 20%, 0.267);
+    text-shadow: 2px 2px 5px #000;
+}
+
+.pic {
+    width: 30%;
+}
+
+.pic img {
+    display: block;
+    border: 5px double gray;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.h1 {
+    font-size: 2.5rem;
+}
